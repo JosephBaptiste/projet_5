@@ -1,0 +1,1 @@
+# stocke les configurations de votre application.
