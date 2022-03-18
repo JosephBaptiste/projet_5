@@ -1,0 +1,13 @@
+presentation projet 5.pptx
+QueryResults.csv
+Rapport_bj_projet_5.docx
+__pycache__/
+images/
+projet_5-1_exploration.ipynb
+projet_5-2_test.ipynb
+text_tagger/__pycache__/
+text_tagger/test.db
+rapport_bj_projet_5.docx
+text_tagger/static/mlb.pkl
+text_tagger/static/model.pkl
+text_tagger/static/tfidfvectorizer.pkl
