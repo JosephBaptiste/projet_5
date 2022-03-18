@@ -1,5 +1,38 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="resultat">
+	<h1 style="text-align: center">Text Tagger</h1>
+
+	<table>
+		<tr>
+			<th>Title</th>
+			<th>Tags</th>
+			<th>Added</th>
+			<th>Actions</th>
+		</tr>
+		{% for result in resultats %}
+			<tr>
+				<td>{{ result.title }}</td>
+				<td>{{ result.tags }}</td>
+				<td>{{ result.date_created.date() }}</td>
+				<td>
+					<a href="/delete/{{result.id}}">Delete</a>
+					<br>
+					<a href="/add_tag/{{result.id}}">Add Tag</a>
+				</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<div class="form">
+		<form action="/" method="POST">
+			<input type="text" name="title" id="title">
+			<input type="submit" value="Add Title">
+		</form>
+	</div>
+</div>
 {% endblock %}
